@@ -1,0 +1,191 @@
+﻿body {
+    background: linear-gradient(to right, rgb(55, 20, 255) 0%, rgb(193, 19, 246) 50%, rgb(255, 128, 240) 100%);
+    background-size: contain;
+}
+
+.home-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+table.board {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: 2px solid black;
+    border-spacing: 0px;
+}
+
+td.cell {
+    width: 56px;
+    height: 56px;
+    border: 2px solid black;
+}
+
+.blackTile {
+    background-color: rgb(178, 194, 201);
+}
+
+.whiteTile {
+    background-color: white;
+}
+
+.blackPlayer {
+    background-image: url('../../Media/blackPlayer.png');
+    cursor: pointer;
+}
+
+.whitePlayer {
+    background-image: url('../../Media/whitePlayer.png');
+    cursor: pointer;
+}
+
+.darkCell {
+    filter: brightness(75%);
+}
+
+.brightCell {
+    filter: brightness(100%);
+}
+
+.moveableCell {
+    filter: brightness(80%) saturate(450%) hue-rotate(180deg);
+    transition: .1s ease;
+    cursor: pointer;
+}
+
+/*----- BUTTONS ------*/
+/*START BUTTON*/
+.start {
+    margin-left: 535px;
+    margin-top: 180px;
+    display: flex;
+    padding: 11px 33px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: white;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+    cursor: pointer;
+}
+
+.start:focus {
+    outline: none;
+}
+
+.start:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.start .second {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.start:hover .second {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+.span {
+    transform: skewX(15deg)
+}
+
+.second {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+}
+
+.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.start:hover .three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.start:hover .one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.start:hover .two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: #FBC638;
+    }
+
+    100% {
+        fill: white;
+    }
+}
+
+
+/*PLAY AGAIN BUTTON*/
+.button {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+}
+
+.button:before {
+    content: "sdvdvsd";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+
+.button:hover {
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.button:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+}
+
+.button:active {
+    transform: scale(0.9);
+}

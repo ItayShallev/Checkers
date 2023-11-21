@@ -1,0 +1,142 @@
+body {
+    background: linear-gradient(to right, rgb(55, 20, 255) 0%, rgb(193, 19, 246) 50%, rgb(255, 128, 240) 100%);
+    background-size: contain;
+}
+
+/* --------------------------------------------------------------------- */
+
+.centered-div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------------------------------------- */
+
+.regular-text {
+    font-family: Assistant;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------------- */
+
+.home-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------- */
+
+.players-button {
+    cursor: pointer;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(97, 184, 176);
+    border-radius: 34px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.players-button:hover {
+    color: rgb(42, 167, 167);
+    transform: scale(1.1);
+    box-shadow: 0 0px 20px rgba(255, 247, 231, 0.6);
+}
+
+.players-button:hover::before {
+    transform: scale(3);
+}
+
+.players-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    transform: scale(0);
+    z-index: -1;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.players-button:active {
+    transform: scale(1);
+}
+
+/* --------------------------------------------------------------------- */
+
+.input-box {
+    background-color: #212121;
+    min-width: 169px;
+    max-width: 500px;
+    height: 25px;
+    padding: 10px;
+    margin-top: 2px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Assistant;
+}
+
+.input-box:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .4s;
+    transition-property: box-shadow;
+}
+
+
+/* --------------------------------------------------------------------- */
+.submit-button {
+    background-color: #212121;
+    max-width: 190px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Assistant;
+}
+
+.submit-button::before {
+    content: 'CONTINUE';
+}
+
+.submit-button:hover {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .4s;
+    transition-property: box-shadow;
+}
+
+/* --------------------------------------------------------------------- */
+
+
+.errors {
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    font-family: Assistant;
+    font-weight: bold;
+    margin-top: 5px;
+}
+

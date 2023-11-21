@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Checkers</title>
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link rel="icon" type="image/x-icon" href="../../Media/checkers.ico" />
+</head>
+<body onload="start();">
+
+    <div>
+        <image src="../../Style/logo.png" class="home-button" onclick="window.location.href = '../../Home/home.html';"></image>
+    </div>
+
+    <table id="Board" class="board" style="visibility: hidden"></table>
+
+    <button class="start" onclick="game(); removeStartButton();" id="start" style="visibility: hidden; left: 540px; top: 360px;">START</button>
+
+    <button class="button" onclick="game(); hideButton();" id="playAgainButton" style="visibility: hidden; left: 553px; top: -295px;">PLAY AGAIN</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

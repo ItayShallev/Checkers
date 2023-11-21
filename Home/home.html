@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkers</title>
+    <link rel="icon" type="image/x-icon" href="../Style/icon.ico">
+    <link rel="stylesheet" href="../Style/style.css">
+</head>
+<body>
+    <div>
+        <image src="../Style/logo.png" class="home-button" onclick="window.location.href = './home.html';"></image>
+    </div>
+
+    <div id="players-options" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 35vh">
+        <button class="players-button" onclick="hidePlayersOptions(); loadNamesForm(1)">1 PLAYER</button>
+        <br>
+        <button class="players-button" onclick="hidePlayersOptions(); loadNamesForm(2)">2 PLAYER</button>
+        <br>
+    </div>
+    
+    <div id="pre-game-preparations" class="centered-div">
+        
+    </div>
+
+    <script src="home_script.js"></script>
+</body>
+</html>
