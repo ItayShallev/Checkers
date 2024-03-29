@@ -62,9 +62,12 @@ td.cell {
 /*----- BUTTONS ------*/
 /*START BUTTON*/
 .start {
-    margin-left: 535px;
+    /* margin-left: 535px;
     margin-top: 180px;
+    display: flex; */
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 11px 33px;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;

@@ -17,7 +17,7 @@ const BLACK_PLAYER = 3;
 const ROW_SCORE = 10;
 const EATING_SCORE = 20
 const ALMOST_WINNING_SCORE = 1500;
-const WINNING_SCORE = 2000;
+const WINNING_SCORE = 10000;
 
 // ----- AUDIO -----
 var winAudio = new Audio("../../Media/winAudio.mp3");
@@ -416,33 +416,24 @@ function calcScoreByEating(board) {
 }
 
 
-function calcScoreByWinning() {
+function calcScoreByWinning(board) {
     var score = 0;
 
     for (var col = 0; col < COLS; col++) {
-        if (BOARD[6][col] == BLACK_PLAYER) {
+        if (board[6][col] == BLACK_PLAYER) {
             score += ALMOST_WINNING_SCORE;
         }
-        if (BOARD[7][col] == BLACK_PLAYER) {
+        if (board[7][col] == BLACK_PLAYER) {
             score += WINNING_SCORE;
         }
     }
-
-    //for (var col = 0; col < COLS; col++) {
-    //    if (BOARD[1][col] == WHITE_PLAYER) {
-    //        score -= ALMOST_WINNING_SCORE;
-    //    }
-    //    if (BOARD[0][col] == WHITE_PLAYER) {
-    //        score -= WINNING_SCORE;
-    //    }
-    //}
 
     return score;
 }
 
 
 function evaluateBoard(board) {
-    return calcScoreByAmount(board) + calcScoreByRow(board) + calcScoreByEating(board) + calcScoreByWinning();
+    return calcScoreByAmount(board) + calcScoreByRow(board) + calcScoreByEating(board) + calcScoreByWinning(board);
 }
 
 

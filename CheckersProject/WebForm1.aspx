@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Checkers</title>
-    <link rel="stylesheet" href="./Style/style.css" />
+    <link href="./Style/style.css" />
     <link rel="icon" type="image/x-icon" href="./Style/icon.ico" />
 </head>
 <body>
